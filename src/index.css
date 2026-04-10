@@ -44,6 +44,10 @@
     .text-field input {
         @apply focus:outline-none;
     }
+
+    .navigation-title-wrapper > button {
+        @apply mr-[7px];
+    }
 }
 
 body {
