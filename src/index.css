@@ -37,6 +37,15 @@
     }
 }
 
+@layer components {
+    .text-field > p {
+        @apply absolute;
+    }
+    .text-field input {
+        @apply focus:outline-none;
+    }
+}
+
 body {
     margin: 0;
     font-family: 'Noto Sans KR Variable', sans-serif;
