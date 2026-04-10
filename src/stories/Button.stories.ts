@@ -2,53 +2,53 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { fn } from 'storybook/test';
 
-import { Button } from './Button';
+import { Button } from '../components/Button';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
+/**
+ * meta: 버튼 컴포넌트의 메타 정보를 나타낸다.
+ * - title: 경로
+ * - component: 스토리를 작성한 컴포넌트
+ */
 const meta = {
-  title: 'Example/Button',
-  component: Button,
-  parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
-  },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#story-args
-  args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+    title: 'Example/Button',
+    component: Button,
+    parameters: {
+        layout: 'centered',
+    },
+    tags: ['autodocs'],
+    /** 각 props의 설명을 적어줄 수 있다. */
+    argTypes: {
+        backgroundColor: { control: 'color', description: '버튼의 배경 컬러' },
+    },
+    args: { onClick: fn() },
+} satisfies Meta<typeof Button>; // Button의 prop들을 정의하는 부분
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
-  args: {
-    primary: true,
-    label: 'Button',
-  },
+    args: {
+        primary: true,
+        label: 'Button',
+    },
 };
 
 export const Secondary: Story = {
-  args: {
-    label: 'Button',
-  },
+    args: {
+        label: 'Button',
+    },
 };
 
 export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
+    args: {
+        size: 'large',
+        label: 'Button',
+    },
 };
 
 export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
+    args: {
+        size: 'small',
+        label: 'Button',
+    },
 };
