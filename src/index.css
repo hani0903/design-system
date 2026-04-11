@@ -11,6 +11,7 @@
     --color-mono300: #d6d7d9;
     --color-error: #d01e1e;
     --color-social: #395997;
+    --radius-primary-button: 5px;
 }
 
 @layer utilities {
