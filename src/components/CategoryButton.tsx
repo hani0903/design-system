@@ -14,7 +14,7 @@ export default function CategoryButton({ iconPath, iconAlt, text, onClick }: ICa
             className={`
             rounded-button-default 
             border not-[]:border-primary
-            text-primary
+            text-mono100
             text-base font-bold
             pl-[22px] pr-[21px] py-4
             ${flexColCenter}
