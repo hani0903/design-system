@@ -25,7 +25,7 @@ export default function PrimaryButton({ children, theme, isDisabled = false, ...
     return (
         <button
             disabled={isDisabled}
-            className={`cursor-pointer w-full h-[59px] rounded-primary-button ${color[theme || 'dark']} ${disabledStyle}`}
+            className={`cursor-pointer w-full h-[59px] rounded-button-default ${color[theme || 'dark']} ${disabledStyle}`}
             {...props}
         >
             {children}
